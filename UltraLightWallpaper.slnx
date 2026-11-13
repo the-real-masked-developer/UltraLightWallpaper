@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/UltraLightWallpaper.Core/UltraLightWallpaper.Core.csproj" />
+    <Project Path="src/UltraLightWallpaper.Windows/UltraLightWallpaper.Windows.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/UltraLightWallpaper.Tests/UltraLightWallpaper.Tests.csproj" />
+    <Project Path="tests/UltraLightWallpaper.Integration/UltraLightWallpaper.Integration.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+artifacts/
+TestResults/
+.vs/
+*.user
+
+# Local settings, diagnostics and authentication files
+settings.json
+settings.json.*
+*.log
+.env
+.env.*
+*.pfx
+*.p12

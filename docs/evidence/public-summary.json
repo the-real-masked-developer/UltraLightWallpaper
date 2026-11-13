@@ -1,0 +1,880 @@
+{
+  "version": "1.1.0",
+  "test_date": "2026-11-12",
+  "note": "Public summary. Machine-specific diagnostics, account names, device IDs and local file paths are omitted.",
+  "runs": {
+    "revision-acceptance": {
+      "failures": 0,
+      "checks": [
+        {
+          "name": "Responsive 640x560 · Fonds d’écran",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 640 · Fonds d’écran",
+          "passed": true
+        },
+        {
+          "name": "Responsive 640x560 · Performances",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 640 · Performances",
+          "passed": true
+        },
+        {
+          "name": "Responsive 640x560 · Application",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 640 · Application",
+          "passed": true
+        },
+        {
+          "name": "Responsive 640x560 · Diagnostic",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 640 · Diagnostic",
+          "passed": true
+        },
+        {
+          "name": "Responsive 800x650 · Fonds d’écran",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 800 · Fonds d’écran",
+          "passed": true
+        },
+        {
+          "name": "Responsive 800x650 · Performances",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 800 · Performances",
+          "passed": true
+        },
+        {
+          "name": "Responsive 800x650 · Application",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 800 · Application",
+          "passed": true
+        },
+        {
+          "name": "Responsive 800x650 · Diagnostic",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 800 · Diagnostic",
+          "passed": true
+        },
+        {
+          "name": "Responsive 1200x900 · Fonds d’écran",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 1200 · Fonds d’écran",
+          "passed": true
+        },
+        {
+          "name": "Responsive 1200x900 · Performances",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 1200 · Performances",
+          "passed": true
+        },
+        {
+          "name": "Responsive 1200x900 · Application",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 1200 · Application",
+          "passed": true
+        },
+        {
+          "name": "Responsive 1200x900 · Diagnostic",
+          "passed": true
+        },
+        {
+          "name": "No horizontal scrolling 1200 · Diagnostic",
+          "passed": true
+        },
+        {
+          "name": "All monitors decode",
+          "passed": true
+        },
+        {
+          "name": "Trimmed segment: wraps on Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Trimmed segment: frames continue after final wrap Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Trimmed segment: retained player, decoder and surface Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Trimmed segment: wraps on Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Trimmed segment: frames continue after final wrap Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Trimmed segment: retained player, decoder and surface Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Segment stays suspended across several loop durations",
+          "passed": true
+        },
+        {
+          "name": "Resumed segment: wraps on Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Resumed segment: frames continue after final wrap Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Resumed segment: retained player, decoder and surface Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Resumed segment: wraps on Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Resumed segment: frames continue after final wrap Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Resumed segment: retained player, decoder and surface Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "All monitors decode",
+          "passed": true
+        },
+        {
+          "name": "Loop disabled stops at segment end",
+          "passed": true
+        },
+        {
+          "name": "Ended status remains accurate after policy evaluation",
+          "passed": true
+        },
+        {
+          "name": "All monitors decode",
+          "passed": true
+        },
+        {
+          "name": "Natural end of both original files: wraps on Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Natural end of both original files: frames continue after final wrap Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Natural end of both original files: retained player, decoder and surface Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Natural end of both original files: wraps on Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Natural end of both original files: frames continue after final wrap Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Natural end of both original files: retained player, decoder and surface Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "All monitors decode",
+          "passed": true
+        },
+        {
+          "name": "Full original files: wraps on Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Full original files: frames continue after final wrap Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Full original files: retained player, decoder and surface Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Full original files: wraps on Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Full original files: frames continue after final wrap Generic PnP Monitor",
+          "passed": true
+        },
+        {
+          "name": "Full original files: retained player, decoder and surface Generic PnP Monitor",
+          "passed": true
+        }
+      ]
+    },
+    "revision-suspension": {
+      "failures": 0,
+      "checks": [
+        {
+          "name": "Native monitor discovery",
+          "passed": true
+        },
+        {
+          "name": "Negative-coordinate portrait monitor",
+          "passed": true
+        },
+        {
+          "name": "Verified WorkerW below icon view",
+          "passed": true
+        },
+        {
+          "name": "Native borderless fullscreen PixelRect { Left = -1080, Top = 139, Right = 0, Bottom = 2059, Width = 1080, Height = 1920, Area = 2073600, IsEmpty = False }",
+          "passed": true
+        },
+        {
+          "name": "Minimized fullscreen excluded",
+          "passed": true
+        },
+        {
+          "name": "Invisible fullscreen excluded",
+          "passed": true
+        },
+        {
+          "name": "Native borderless fullscreen PixelRect { Left = 0, Top = 0, Right = 2560, Bottom = 1440, Width = 2560, Height = 1440, Area = 3686400, IsEmpty = False }",
+          "passed": true
+        },
+        {
+          "name": "Minimized fullscreen excluded",
+          "passed": true
+        },
+        {
+          "name": "Invisible fullscreen excluded",
+          "passed": true
+        },
+        {
+          "name": "Native maximized ordinary window not fullscreen",
+          "passed": true
+        },
+        {
+          "name": "Native maximized coverage reaches 95%",
+          "passed": true
+        },
+        {
+          "name": "Native coverage drives global suspension",
+          "passed": true
+        },
+        {
+          "name": "Independent mode leaves other monitor playing",
+          "passed": true
+        },
+        {
+          "name": "Two native fullscreen windows retained",
+          "passed": true
+        },
+        {
+          "name": "Closing one keeps second fullscreen",
+          "passed": true
+        },
+        {
+          "name": "Final close clears fullscreen",
+          "passed": true
+        },
+        {
+          "name": "Real video player created on every monitor",
+          "passed": true
+        },
+        {
+          "name": "Players have decoded video frames",
+          "passed": true
+        },
+        {
+          "name": "Hardware decoder evidence",
+          "passed": true
+        },
+        {
+          "name": "Performance playing",
+          "seconds": 20.0320184,
+          "cpuPercentTotalCapacity": 0.5720017041806933,
+          "privateMiB": 562.68359375
+        },
+        {
+          "name": "Performance suspended",
+          "seconds": 20.0349771,
+          "cpuPercentTotalCapacity": 0.4939288150107921,
+          "privateMiB": 406.83984375
+        },
+        {
+          "name": "Suspension stops sustained video decoding",
+          "passed": true
+        },
+        {
+          "name": "Suspension preserves media position",
+          "passed": true
+        },
+        {
+          "name": "Pause preserves native surfaces",
+          "passed": true
+        },
+        {
+          "name": "Performance resumed",
+          "seconds": 20.0321295,
+          "cpuPercentTotalCapacity": 1.3389971312468503,
+          "privateMiB": 585.01953125
+        },
+        {
+          "name": "Resume retains player surfaces",
+          "passed": true
+        },
+        {
+          "name": "Resume decodes more frames",
+          "passed": true
+        },
+        {
+          "name": "WinEvent triggers prompt reevaluation",
+          "passed": true
+        },
+        {
+          "name": "Fullscreen on PixelRect { Left = -1080, Top = 139, Right = 0, Bottom = 2059, Width = 1080, Height = 1920, Area = 2073600, IsEmpty = False } suspends every real player",
+          "passed": true
+        },
+        {
+          "name": "Closing fullscreen restores normal policy",
+          "passed": true
+        },
+        {
+          "name": "WinEvent triggers prompt reevaluation",
+          "passed": true
+        },
+        {
+          "name": "Fullscreen on PixelRect { Left = 0, Top = 0, Right = 2560, Bottom = 1440, Width = 2560, Height = 1440, Area = 3686400, IsEmpty = False } suspends every real player",
+          "passed": true
+        },
+        {
+          "name": "Closing fullscreen restores normal policy",
+          "passed": true
+        },
+        {
+          "name": "Multiple fullscreen windows suspend real players",
+          "passed": true
+        },
+        {
+          "name": "Second fullscreen keeps every real player paused",
+          "passed": true
+        },
+        {
+          "name": "Final fullscreen clears global reason",
+          "passed": true
+        },
+        {
+          "name": "Fullscreen transitions never recreate surfaces",
+          "passed": true
+        },
+        {
+          "name": "Disabling automatic suspension immediately resumes",
+          "passed": true
+        }
+      ]
+    },
+    "revision-performance": {
+      "failures": 0,
+      "checks": [
+        {
+          "name": "Real video player created on every monitor",
+          "passed": true
+        },
+        {
+          "name": "Players have decoded video frames",
+          "passed": true
+        },
+        {
+          "name": "Hardware decoder evidence",
+          "passed": true
+        },
+        {
+          "name": "Performance playing",
+          "seconds": 60.1168231,
+          "cpuPercentTotalCapacity": 0.584799151414492,
+          "privateMiB": 600.625
+        },
+        {
+          "name": "Performance suspended",
+          "seconds": 60.1095331,
+          "cpuPercentTotalCapacity": 0.35092208707667,
+          "privateMiB": 433.2421875
+        },
+        {
+          "name": "Suspension stops sustained video decoding",
+          "passed": true
+        },
+        {
+          "name": "Suspension preserves media position",
+          "passed": true
+        },
+        {
+          "name": "Pause preserves native surfaces",
+          "passed": true
+        },
+        {
+          "name": "Performance resumed",
+          "seconds": 60.1243512,
+          "cpuPercentTotalCapacity": 2.2609446486288025,
+          "privateMiB": 595.65625
+        },
+        {
+          "name": "Resume retains player surfaces",
+          "passed": true
+        },
+        {
+          "name": "Resume decodes more frames",
+          "passed": true
+        },
+        {
+          "name": "WinEvent triggers prompt reevaluation",
+          "passed": true
+        },
+        {
+          "name": "Fullscreen on PixelRect { Left = -1080, Top = 139, Right = 0, Bottom = 2059, Width = 1080, Height = 1920, Area = 2073600, IsEmpty = False } suspends every real player",
+          "passed": true
+        },
+        {
+          "name": "Closing fullscreen restores normal policy",
+          "passed": true
+        },
+        {
+          "name": "WinEvent triggers prompt reevaluation",
+          "passed": true
+        },
+        {
+          "name": "Fullscreen on PixelRect { Left = 0, Top = 0, Right = 2560, Bottom = 1440, Width = 2560, Height = 1440, Area = 3686400, IsEmpty = False } suspends every real player",
+          "passed": true
+        },
+        {
+          "name": "Closing fullscreen restores normal policy",
+          "passed": true
+        },
+        {
+          "name": "Multiple fullscreen windows suspend real players",
+          "passed": true
+        },
+        {
+          "name": "Second fullscreen keeps every real player paused",
+          "passed": true
+        },
+        {
+          "name": "Final fullscreen clears global reason",
+          "passed": true
+        },
+        {
+          "name": "Fullscreen transitions never recreate surfaces",
+          "passed": true
+        },
+        {
+          "name": "Disabling automatic suspension immediately resumes",
+          "passed": true
+        }
+      ]
+    }
+  },
+  "unit_tests": {
+    "total": "70",
+    "executed": "70",
+    "passed": "70",
+    "failed": "0",
+    "error": "0",
+    "timeout": "0",
+    "aborted": "0",
+    "inconclusive": "0",
+    "passedButRunAborted": "0",
+    "notRunnable": "0",
+    "notExecuted": "0",
+    "disconnected": "0",
+    "warning": "0",
+    "completed": "0",
+    "inProgress": "0",
+    "pending": "0"
+  },
+  "unit_results": [
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.UnionClipsAndDoesNotDoubleCount",
+      "outcome": "Passed",
+      "duration": "00:00:00.0005113"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.MonitorDisconnectClearsItsGlobalLatch",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002816"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"wallpaper\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000553"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.ClientGeometryPreventsSizeOnlyFalsePositive",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002433"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SettingsTests.ModeAndMonitorConfigurationPersistAcrossNewStore(mode: GlobalOcclusion)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0089884"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"noactivate\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000173"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"child\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000083"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.ValidatesActualMediaBounds(start: 10, end: null, duration: 10000, valid: False, expectedStart: 0, expectedEnd: 0)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000062"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.FocalPositionMovesCrop(focus: 0.5, expected: -1167)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0041437"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.RenewedFullscreenCancelsPendingResume",
+      "outcome": "Passed",
+      "duration": "00:00:00.0014153"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SettingsTests.UnsupportedSchemaIsNotSilentlyRead",
+      "outcome": "Passed",
+      "duration": "00:00:00.0020647"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.DisabledFullscreenStillCalculatesOcclusion",
+      "outcome": "Passed",
+      "duration": "00:00:00.0001557"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SettingsTests.ModeAndMonitorConfigurationPersistAcrossNewStore(mode: GlobalFullscreen)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0083669"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.EmptySurfaceAndInvalidVideoAreHandled",
+      "outcome": "Passed",
+      "duration": "00:00:00.0011383"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.MultipleFullscreenAppsIncludingBackgroundMonitorAreRetained",
+      "outcome": "Passed",
+      "duration": "00:00:00.0003334"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SettingsTests.SavingRecoveredSettingsPreservesValidBackupAndBadInput",
+      "outcome": "Passed",
+      "duration": "00:00:00.0361307"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SettingsTests.InvalidConfigurationUsesDefaultsWithExplanation",
+      "outcome": "Passed",
+      "duration": "00:00:00.0726315"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"transparent\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000610"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.AltTabFullyObscuredGameDoesNotCountButOtherMonitorDoes",
+      "outcome": "Passed",
+      "duration": "00:00:00.0017855"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.FocalPositionMovesCrop(focus: 0, expected: 0)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000239"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.ResumeAllCannotOverrideActiveFullscreen",
+      "outcome": "Passed",
+      "duration": "00:00:00.0001574"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SettingsTests.CorruptionRecoversPreviousGoodBackup",
+      "outcome": "Passed",
+      "duration": "00:00:00.0148404"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.ValidatesActualMediaBounds(start: 2, end: null, duration: 208880, valid: True, expectedStart: 2000, expectedEnd: 208880)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0039905"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.DisabledFullscreenFallsBackToIndependentCoverage",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002336"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.ValidatesActualMediaBounds(start: 5, end: 4, duration: 10000, valid: False, expectedStart: 0, expectedEnd: 0)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000059"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.OwnedFullscreenPlayerIsNotMistakenForTransientDialog",
+      "outcome": "Passed",
+      "duration": "00:00:00.0079222"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SettingsTests.ModeAndMonitorConfigurationPersistAcrossNewStore(mode: IndependentMonitors)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0291140"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.OnlyFinalFullscreenExitStartsResumeDelay",
+      "outcome": "Passed",
+      "duration": "00:00:00.0006704"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.SmallTransientOverlayDoesNotCancelGame",
+      "outcome": "Passed",
+      "duration": "00:00:00.0001620"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.BorderlessMaximizedWorkAreaDoesNotCount",
+      "outcome": "Passed",
+      "duration": "00:00:00.0001549"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.MaximizedFramedBrowserIsCoverageButNotFullscreen",
+      "outcome": "Passed",
+      "duration": "00:00:00.0089370"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.DpiToleranceIsAppliedInPhysicalPixels",
+      "outcome": "Passed",
+      "duration": "00:00:00.0004998"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.Exactly92PercentStartsDefaultHysteresisRelease",
+      "outcome": "Passed",
+      "duration": "00:00:00.0040509"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"owner\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000933"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.MonitorReconnectJoinsExistingGlobalPause",
+      "outcome": "Passed",
+      "duration": "00:00:00.0001926"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.SessionPauseWorksWithAutomaticDisabled",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002558"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.RecoveryPositionStaysInsideSegment",
+      "outcome": "Passed",
+      "duration": "00:00:00.0127201"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.PortraitCoverPreservesAspectAndFillsEveryPixel",
+      "outcome": "Passed",
+      "duration": "00:00:00.0012020"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.SweepMatchesIndependentPixelOracle",
+      "outcome": "Passed",
+      "duration": "00:00:00.0439650"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.SettingsAndDisableApplyImmediately",
+      "outcome": "Passed",
+      "duration": "00:00:00.0024076"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.LargeAreasUse64Bits",
+      "outcome": "Passed",
+      "duration": "00:00:00.0011271"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"system\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000784"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.ContainCentersAndStretchFills",
+      "outcome": "Passed",
+      "duration": "00:00:00.0031303"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"desktop\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000576"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.ValidatesActualMediaBounds(start: 1, end: 1.05, duration: 10000, valid: False, expectedStart: 0, expectedEnd: 0)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000368"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.MillisecondTrimPersistsAndOldSettingsStillLoad",
+      "outcome": "Passed",
+      "duration": "00:00:00.0719680"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"tool\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000167"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"minimized\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0005417"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.ValidatesActualMediaBounds(start: 2.125, end: 5.625, duration: 10000, valid: True, expectedStart: 2125, expectedEnd: 5625)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000092"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.FullscreenHasPriorityThenReturnsToIndependentState",
+      "outcome": "Passed",
+      "duration": "00:00:00.0005356"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.ShellExclusiveEvidenceDoesNotRequireBorderlessStyle",
+      "outcome": "Passed",
+      "duration": "00:00:00.0001865"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.ManualAndPerMonitorPauseSurviveAutomaticResume",
+      "outcome": "Passed",
+      "duration": "00:00:00.0003601"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.ValidatesActualMediaBounds(start: 0, end: null, duration: 64640, valid: True, expectedStart: 0, expectedEnd: 64640)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000696"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SettingsTests.ValuesAreNormalized",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002864"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.ValidatesActualMediaBounds(start: 0, end: 11, duration: 10000, valid: False, expectedStart: 0, expectedEnd: 0)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0043076"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.CoverageHysteresisPreventsOscillation",
+      "outcome": "Passed",
+      "duration": "00:00:00.0003869"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.LargeWindowAndSpanningWindowAreNotFullscreen",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002234"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.ArbitraryAspectRatiosNeverUnderfillCover",
+      "outcome": "Passed",
+      "duration": "00:00:00.0138382"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.UntrimmedUnknownDurationCanPlay",
+      "outcome": "Passed",
+      "duration": "00:00:00.0001260"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"cloaked\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000926"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.PlaybackRangeTests.ValidatesActualMediaBounds(start: 2, end: 5, duration: 0, valid: False, expectedStart: 0, expectedEnd: 0)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0000073"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.FullscreenEitherMonitorPausesAll(id: \"B\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002348"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.FullscreenEitherMonitorPausesAll(id: \"A\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0253696"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.DetectsBorderlessOnEitherMonitor(second: False)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0003266"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.MaximizedAppInGamingModeOnlyPausesItsMonitor",
+      "outcome": "Passed",
+      "duration": "00:00:00.0005315"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.NonApplicationsNeverTriggerFullscreen(kind: \"hidden\")",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002536"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.DetectionTests.DetectsBorderlessOnEitherMonitor(second: True)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002083"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.DefaultIsIndependent",
+      "outcome": "Passed",
+      "duration": "00:00:00.0048179"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.SuspensionTests.GlobalOcclusionUsesAnyMonitorAndNotFullscreen",
+      "outcome": "Passed",
+      "duration": "00:00:00.0002776"
+    },
+    {
+      "testName": "UltraLightWallpaper.Tests.GeometryTests.FocalPositionMovesCrop(focus: 1, expected: -2334)",
+      "outcome": "Passed",
+      "duration": "00:00:00.0006306"
+    }
+  ],
+  "installed_app_performance": {
+    "playing": {
+      "CpuPercentTotalCapacity": 6.007669468574554,
+      "Gpu3DPercent": 0.1351715292587384,
+      "GpuDecodePercent": 31.134024864064255,
+      "samples": 12,
+      "validCountersPerSample": 15
+    },
+    "paused": {
+      "CpuPercentTotalCapacity": 4.38664782456756,
+      "Gpu3DPercent": 0.04122296493430307,
+      "GpuDecodePercent": 0.0,
+      "samples": 12,
+      "validCountersPerSample": 15
+    }
+  }
+}
