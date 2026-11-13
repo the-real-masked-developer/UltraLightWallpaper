@@ -1,3 +1,10 @@
+### NOTE: si powershell indique que l'execution des scripts est desactivee, lance:
+
+```Powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+```
+
+
 # UltraLightWallpaper
 
 A Windows 11 x64 video wallpaper engine built from a clean project. It includes independent monitor suspension, global fullscreen suspension, and global coverage suspension as core features.
