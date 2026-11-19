@@ -15,6 +15,7 @@ public sealed class Engine : IDisposable
     private readonly System.Windows.Forms.Timer verifyTimer = new();
     private readonly System.Windows.Forms.Timer healthTimer = new() { Interval = 5000 };
     private readonly System.Windows.Forms.Timer resumeTimer = new();
+    private readonly System.Windows.Forms.Timer wakeRecoveryTimer = new() { Interval = 1000 };
     private readonly Dictionary<string, PlaybackSession> sessions = new();
     private readonly Dictionary<string, string> failures = new();
     private readonly Dictionary<string, int> retries = new();
@@ -23,7 +24,7 @@ public sealed class Engine : IDisposable
     private bool backendInitializing;
     private string? backendError;
     private DesktopTopology? topology;
-    private bool disposed, sessionInactive;
+    private bool disposed, sessionInactive, wakeRecoveryPending;
     public AppSettings Settings { get; private set; }
     public IReadOnlyList<MonitorSnapshot> Monitors { get; private set; } = [];
     public IReadOnlyDictionary<string, PlaybackSession> Sessions => sessions;
@@ -43,7 +44,31 @@ public sealed class Engine : IDisposable
         events.Changed += RequestEvaluation;
         events.DisplaysChanged += RefreshMonitors;
         events.ShellRestarted += Restart;
-        events.SessionChanged += inactive => { sessionInactive = inactive; Evaluate(); };
+        events.SessionChanged += inactive =>
+        {
+            bool wasInactive = sessionInactive;
+            sessionInactive = inactive;
+            if (inactive) { wakeRecoveryTimer.Stop(); wakeRecoveryPending = false; }
+            else if (wasInactive) ScheduleWakeRecovery();
+            Evaluate();
+        };
+        events.RecoveryRequested += ScheduleWakeRecovery;
+        wakeRecoveryTimer.Tick += (_, _) =>
+        {
+            wakeRecoveryTimer.Stop();
+            if (disposed || sessionInactive) return;
+            Log.Write("Rebuilding wallpaper players after Windows session/display wake.");
+            try
+            {
+                Monitors = WindowInspector.GetMonitors();
+                Restart(); // Recreate native D3D11 outputs while retaining video positions.
+            }
+            finally
+            {
+                wakeRecoveryPending = false;
+                Evaluate();
+            }
+        };
         evaluateTimer.Tick += (_, _) => { evaluateTimer.Stop(); Evaluate(); };
         resumeTimer.Tick += (_, _) => { resumeTimer.Stop(); Evaluate(); };
         verifyTimer.Tick += (_, _) => Evaluate();
@@ -125,6 +150,14 @@ public sealed class Engine : IDisposable
         catch (InvalidOperationException) when (disposed || dispatcher.IsDisposed || !dispatcher.IsHandleCreated) { initialized?.Dispose(); }
     }
     private void OnSessionChanged() => Changed?.Invoke();
+    private void ScheduleWakeRecovery()
+    {
+        if (disposed || sessionInactive) return;
+        // Coalesce unlock and power notifications into a single delayed recovery.
+        wakeRecoveryPending = true;
+        if (!wakeRecoveryTimer.Enabled) wakeRecoveryTimer.Start();
+        Evaluate(); // Keep old video output paused until it can be rebuilt.
+    }
     private void RequestEvaluation()
     {
         if (disposed || sessions.Count == 0 || !Settings.Suspension.Enabled || evaluateTimer.Enabled) return;
@@ -139,7 +172,7 @@ public sealed class Engine : IDisposable
             ? inspector.Analyze(Monitors, Settings.Suspension, sessions.Values.Select(s => (nint)s.SurfaceHandle).ToHashSet())
             : new(new Dictionary<string, double>(), []);
         Decisions = policy.Evaluate(Monitors.Select(m => m.Id).ToArray(), Detection, Settings.Suspension, Environment.TickCount64, ManualPause,
-            Settings.Monitors.Where(p => p.Value.Paused).Select(p => p.Key).ToHashSet(), sessionInactive);
+            Settings.Monitors.Where(p => p.Value.Paused).Select(p => p.Key).ToHashSet(), sessionInactive || wakeRecoveryPending);
         foreach (var decision in Decisions.Decisions)
             if (sessions.TryGetValue(decision.MonitorId, out var session)) session.Suspend(decision.Suspended, decision.Reason);
         resumeTimer.Stop();
@@ -149,7 +182,8 @@ public sealed class Engine : IDisposable
     }
     private void CheckHealth()
     {
-        if (disposed) return;
+        // Do not probe/restart the shell while the session or display is asleep.
+        if (disposed || sessionInactive || wakeRecoveryPending) return;
         if (topology is null || !topology.IsValid || sessions.Values.Any(s => !s.NativeWindowsValid)) { Restart(); return; }
         foreach (var item in sessions.Where(p => p.Value.Failed && p.Value.RetryableFailure).ToArray())
         {
@@ -174,7 +208,7 @@ public sealed class Engine : IDisposable
         var b = new StringBuilder();
         b.AppendLine($"UltraLightWallpaper 1.1.0 | {DateTimeOffset.Now:O} | {Environment.OSVersion} | x64={Environment.Is64BitProcess}");
         b.AppendLine($"Shell: {ShellStatus}\nDecoder: {HardwareStatus}");
-        b.AppendLine($"Mode={Settings.Suspension.Mode}; Auto={Settings.Suspension.Enabled}; Fullscreen={Settings.Suspension.FullscreenDetectionEnabled}; Manual={ManualPause}; SessionInactive={sessionInactive}");
+        b.AppendLine($"Mode={Settings.Suspension.Mode}; Auto={Settings.Suspension.Enabled}; Fullscreen={Settings.Suspension.FullscreenDetectionEnabled}; Manual={ManualPause}; SessionInactive={sessionInactive}; WakeRecoveryPending={wakeRecoveryPending}");
         b.AppendLine($"Threshold={Settings.Suspension.OcclusionThreshold:P0}; Hysteresis={Settings.Suspension.Hysteresis:P0}; Resume={Settings.Suspension.ResumeDelayMs}ms; Verify={Settings.Suspension.VerificationIntervalMs}ms");
         b.AppendLine($"Private={process.PrivateMemorySize64 / 1048576d:F1} MiB; WorkingSet={process.WorkingSet64 / 1048576d:F1} MiB; Managed={GC.GetTotalMemory(false) / 1048576d:F1} MiB; Handles={process.HandleCount}; GDI={Native.GetGuiResources(process.Handle, 0)}; USER={Native.GetGuiResources(process.Handle, 1)}");
         b.AppendLine($"Evaluations={EvaluationCount}; last scan={LastScanMs:F3}ms; Players={sessions.Count}");
@@ -191,7 +225,7 @@ public sealed class Engine : IDisposable
     {
         if (disposed) return;
         disposed = true;
-        events.Dispose(); evaluateTimer.Dispose(); verifyTimer.Dispose(); resumeTimer.Dispose(); healthTimer.Dispose();
+        events.Dispose(); evaluateTimer.Dispose(); verifyTimer.Dispose(); resumeTimer.Dispose(); wakeRecoveryTimer.Dispose(); healthTimer.Dispose();
         foreach (var session in sessions.Values) session.Dispose(); sessions.Clear(); backend?.Dispose(); inspector.Dispose();
     }
 }

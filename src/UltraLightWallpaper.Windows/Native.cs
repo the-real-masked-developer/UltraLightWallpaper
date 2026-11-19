@@ -77,6 +77,8 @@ internal static class Native
     [DllImport("user32.dll")] internal static extern bool UnhookWinEvent(nint hook);
     [DllImport("wtsapi32.dll", SetLastError = true)] internal static extern bool WTSRegisterSessionNotification(nint window, uint flags);
     [DllImport("wtsapi32.dll")] internal static extern bool WTSUnRegisterSessionNotification(nint window);
+    [DllImport("user32.dll", SetLastError = true)] internal static extern nint RegisterPowerSettingNotification(nint recipient, ref Guid setting, uint flags);
+    [DllImport("user32.dll", SetLastError = true)] internal static extern bool UnregisterPowerSettingNotification(nint registration);
     [DllImport("user32.dll")] internal static extern uint GetGuiResources(nint process, uint flags);
     [DllImport("user32.dll")] internal static extern bool DestroyIcon(nint handle);
     [DllImport("user32.dll")] internal static extern nint BeginPaint(nint window, out Paint paint);
