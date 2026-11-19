@@ -22,6 +22,8 @@ internal sealed class WindowEvents : NativeWindow, IDisposable
     private bool sessionUnavailable, powerSuspended, displayUnavailable, previouslyInactive;
     public event Action? Changed;
     public event Action? DisplaysChanged;
+    // Some DisplayPort hot-plug events precede (or replace) WM_DISPLAYCHANGE.
+    public event Action? DevicesChanged;
     public event Action? ShellRestarted;
     public event Action<bool>? SessionChanged;
     public event Action? RecoveryRequested;
@@ -67,7 +69,8 @@ internal sealed class WindowEvents : NativeWindow, IDisposable
     protected override void WndProc(ref Message m)
     {
         if (m.Msg == taskbarCreated) ShellRestarted?.Invoke();
-        else if (m.Msg is 0x007e or 0x02e0) DisplaysChanged?.Invoke();
+        else if (m.Msg is 0x007e or 0x02e0) DisplaysChanged?.Invoke(); // WM_DISPLAYCHANGE / WM_DPICHANGED
+        else if (m.Msg == 0x0219 && (int)m.WParam == 7) DevicesChanged?.Invoke(); // WM_DEVICECHANGE / DBT_DEVNODES_CHANGED
         else if (m.Msg == 0x02b1) // WM_WTSSESSION_CHANGE
         {
             int code = (int)m.WParam;
